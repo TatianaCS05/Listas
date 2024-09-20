@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Navegación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home" onclick="showSection('home')">Lista enlazada</a></li>
+                <li><a href="#about" onclick="showSection('about')">Lista enlazada doble </a></li>
+                <li><a href="#services" onclick="showSection('services')">Lista enlazada circular</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Inicio con imagen y descripción -->
+        <section id="home" class="content-section">
+            <h1>Bienvenido a la Página de Inicio</h1>
+            <div class="content">
+                <img src="https://via.placeholder.com/300" alt="Imagen de Inicio">
+                <p>Este es el contenido de la página de inicio. Aquí puedes incluir una imagen y una descripción para dar la bienvenida a los visitantes.</p>
+            </div>
+        </section>
+
+        <!-- Sección Acerca de con imagen y descripción -->
+        <section id="about" class="content-section" style="display: none;">
+            <h1>Acerca de Nosotros</h1>
+            <div class="content">
+                <img src="https://via.placeholder.com/300" alt="Imagen de Acerca de Nosotros">
+                <p>Somos una empresa dedicada a ofrecer soluciones innovadoras. Nuestra misión es proporcionar productos de alta calidad para nuestros clientes.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios con imagen y descripción -->
+        <section id="services" class="content-section" style="display: none;">
+            <h1>Nuestros Servicios</h1>
+            <div class="content">
+                <img src="https://via.placeholder.com/300" alt="Imagen de Servicios">
+                <p>Ofrecemos una amplia gama de servicios, desde desarrollo web hasta consultoría tecnológica. Nuestros expertos están aquí para ayudarte a alcanzar tus objetivos.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto (solo texto) -->
+        <section id="contact" class="content-section" style="display: none;">
+            <h1>Contacto</h1>
+            <p>Puedes contactarnos a través del formulario. Estaremos encantados de atenderte.</p>
+        </section>
+    </main>
+
+    
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
